@@ -19,7 +19,7 @@ app.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'ema
 app.get('/auth/google/callback', passport.authenticate('google'));
 
 app.get('/', (req, res) => {
- res.send('hello kitty')
+ res.send('hello kitty...')
 });
 
 const PORT = process.env.PORT || 5000;
