@@ -6,29 +6,29 @@ const User = mongoose.model('users');
 
 passport.use(
     new GoogleStrategy({
-        clientID: keys.googleClientID,
-        clientSecret: keys.googleClientSecret,
-        callbackURL: '/auth/google/callback'
-    }, (accessToken, refreshToken, profile, done) => {
-        User.findOne({googleId: profile.id}).then((existingUser) => {
+            clientID: keys.googleClientID,
+            clientSecret: keys.googleClientSecret,
+            callbackURL: '/auth/google/callback'
+        },
+        async (accessToken, refreshToken, profile, done) => {
+            const existingUser = await User.findOne({googleId: profile.id});
             if (existingUser) {
                 //user - get that user
                 done(null, existingUser);
 
             } else {
                 //saves new user and preforms user - user get user
-                new User({googleId: profile.id}).save()
-                    .then(user => done(null, user));
+                const user = await new User({googleId: profile.id}).save();
+                done(null, user);
             }
-        })
-    }));
+        }));
 
-passport.serializeUser((user, done)=>{
+passport.serializeUser((user, done) => {
     done(null, user.id)
 });
 
 passport.deserializeUser(((id, done) => {
-    User.findById(id).then(user=>{
+    User.findById(id).then(user => {
         done(null, user)
     })
 }));
