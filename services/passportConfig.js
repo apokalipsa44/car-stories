@@ -14,13 +14,11 @@ passport.use(
             const existingUser = await User.findOne({googleId: profile.id});
             if (existingUser) {
                 //user - get that user
-                done(null, existingUser);
-
-            } else {
-                //saves new user and preforms user - user get user
-                const user = await new User({googleId: profile.id}).save();
-                done(null, user);
+                return done(null, existingUser);
             }
+            //saves new user and preforms user - user get user
+            const user = await new User({googleId: profile.id}).save();
+            done(null, user);
         }));
 
 passport.serializeUser((user, done) => {
