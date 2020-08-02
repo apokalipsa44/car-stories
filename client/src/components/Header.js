@@ -7,9 +7,9 @@ class Header extends Component {
 
                 <nav>
                     <div className="nav-wrapper">
-                        <a href="#" className="brand-logo">Kubota</a>
+                        <a href="/auth/google" className="brand-logo">google Login</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><a href="sass.html">Login</a></li>
+                            <li><a href="sass.html">kkk</a></li>
 
                         </ul>
                     </div>
