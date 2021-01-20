@@ -198,3 +198,4 @@ $RECYCLE.BIN/
 /node_modules/
 /oodo-react-client/node_modules/
 keys.js
+.env
