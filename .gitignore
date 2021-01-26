@@ -199,3 +199,4 @@ $RECYCLE.BIN/
 /oodo-react-client/node_modules/
 keys.js
 .env
+/.env
