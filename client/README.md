@@ -1,1 +1,1 @@
-Frontend part for Dr. Evil's Superstore
+Frontend part for app-planner
