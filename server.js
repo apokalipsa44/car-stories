@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const authRoutes = require("./routes/auth-routes");
+const profileRoutes = require("./routes/profile-routes");
 require("./services/google-strategy");
 require("dotenv").config();
 const session = require("express-session");
@@ -13,7 +14,6 @@ app.use(session({ secret: "cats" }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 mongoose.connect(
   process.env.MONGO_URL,
@@ -27,9 +27,10 @@ mongoose.connect(
 );
 
 app.use("/auth", authRoutes);
+app.use("/profile", profileRoutes);
 
 app.get("/", (req, res) => {
-  res.send("jojojo");
+  res.send(req.user);
 });
 
 app.listen(process.env.PORT, () => {
