@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const passport = require("passport");
+const generateToken = require('../services/jwt-utils')
 
 const authCheck = (req, res, next) => {
   if (!req.user) {
@@ -10,7 +11,9 @@ const authCheck = (req, res, next) => {
 };
 
 router.get("/", authCheck, (req, res) => {
-  res.send(req.user);
+  const token = generateToken(req.user);
+  res.send(token);
+  console.log('token',token);
 });
 
-module.exports =router;
+module.exports = router;
