@@ -7,7 +7,7 @@ require("dotenv").config();
 
 
  const generateToken = (user) => {
-  return jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+  return 'Bearer '+jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
 };
 
 var opts = {};
