@@ -4,11 +4,10 @@ const passport = require("passport");
 const authRoutes = require("./routes/auth-routes");
 const profileRoutes = require("./routes/profile-routes");
 require("./services/google-strategy");
+require("./services/jwt-utils");
 require("dotenv").config();
 const session = require("express-session");
 const bodyParser = require("body-parser");
-const jwtUtils = require("./services/jwt-utils");
-// const localStorage = require('localStorage')
 
 const app = express();
 app.use(express.static("public"));
@@ -29,13 +28,14 @@ mongoose.connect(
 );
 
 app.use("/auth", authRoutes);
-app.use("/profile",passport.authenticate('jwt', { session: false }), profileRoutes);
+app.use(
+  "/profile",
+  passport.authenticate("jwt", { session: false }),
+  profileRoutes
+);
 
 app.get("/", (req, res) => {
-  // const token = jwtUtils.generateToken(req.user);
-  // res.setHeader("authentication", token);
-  // res.json({jwt:token, user:req.user, error:""});
-  res.send('sijsij')
+  res.send("dash");
 });
 
 app.listen(process.env.PORT, () => {

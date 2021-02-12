@@ -9,11 +9,8 @@ const authCheck = (req, res, next) => {
 };
 
 
-
 router.get("/", (req, res) => {
-  console.log('profile')
-  res.send(req.user)
-  
+  res.json(req.user)
 });
 
 module.exports = router;
