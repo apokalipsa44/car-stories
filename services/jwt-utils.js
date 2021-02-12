@@ -5,9 +5,8 @@ const jwt = require("jsonwebtoken");
 
 require("dotenv").config();
 
-
- const generateToken = (user) => {
-  return 'Bearer '+jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+const generateToken = (user) => {
+  return "Bearer " + jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
 };
 
 var opts = {};
@@ -31,4 +30,4 @@ passport.use(
   })
 );
 
-exports.generateToken=generateToken
+exports.generateToken = generateToken;

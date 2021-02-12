@@ -10,10 +10,17 @@ const authCheck = (req, res, next) => {
   }
 };
 
+const jwtAuthenticate= (req, res, next)=>{
+  passport.authenticate('jwt', { session: false }),function(req, res) {
+        res.send(req.user.profile);
+    }
+    next()
+}
+
 router.get("/", authCheck, (req, res) => {
-  const token = generateToken(req.user);
-  res.send(token);
-  console.log('token',token);
+  console.log('profile')
+  res.send(req.user)
+  
 });
 
 module.exports = router;

@@ -34,7 +34,7 @@ app.use("/profile", profileRoutes);
 app.get("/", (req, res) => {
   const token = jwtUtils.generateToken(req.user);
   res.setHeader("authentication", token);
-  res.send(token);
+  res.json({jwt:token, user:req.user, error:""});
 });
 
 app.listen(process.env.PORT, () => {
