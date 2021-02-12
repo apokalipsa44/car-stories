@@ -29,12 +29,13 @@ mongoose.connect(
 );
 
 app.use("/auth", authRoutes);
-app.use("/profile", profileRoutes);
+app.use("/profile",passport.authenticate('jwt', { session: false }), profileRoutes);
 
 app.get("/", (req, res) => {
-  const token = jwtUtils.generateToken(req.user);
-  res.setHeader("authentication", token);
-  res.json({jwt:token, user:req.user, error:""});
+  // const token = jwtUtils.generateToken(req.user);
+  // res.setHeader("authentication", token);
+  // res.json({jwt:token, user:req.user, error:""});
+  res.send('sijsij')
 });
 
 app.listen(process.env.PORT, () => {
