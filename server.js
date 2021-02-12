@@ -7,6 +7,8 @@ require("./services/google-strategy");
 require("dotenv").config();
 const session = require("express-session");
 const bodyParser = require("body-parser");
+const jwtUtils = require("./services/jwt-utils");
+// const localStorage = require('localStorage')
 
 const app = express();
 app.use(express.static("public"));
@@ -30,7 +32,9 @@ app.use("/auth", authRoutes);
 app.use("/profile", profileRoutes);
 
 app.get("/", (req, res) => {
-  res.send(req.user);
+  const token = jwtUtils.generateToken(req.user);
+  res.setHeader("authentication", token);
+  res.json({jwt:token, user:req.user, error:""});
 });
 
 app.listen(process.env.PORT, () => {
