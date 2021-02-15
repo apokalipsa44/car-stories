@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import MainPage from "./components/MainPage";
 
 function App() {
-    return (
-        <div>
-            app
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <MainPage />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
