@@ -1,21 +1,12 @@
 import React from 'react';
-import MainPage from './pages/main-page/MainPage';
-import HeaderComponent from './views/header/HeaderComponent';
-import { TailwindThemeProvider } from 'tailwind-react-ui'
-
 
 function App() {
   return (
-    <TailwindThemeProvider
-    theme={{
-      brandColors: {
-        primary: 'red',
-      },
-    }} >
-    <HeaderComponent/>
-    <MainPage/>
-   
-    </TailwindThemeProvider>
+    <div >
+     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
+  Button
+</button>
+    </div>
   );
 }
 
