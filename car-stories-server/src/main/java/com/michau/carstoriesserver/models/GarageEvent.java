@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class CarEvent {
+public class GarageEvent {
 
     private String eventDate;
     private String currentMileage;

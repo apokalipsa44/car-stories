@@ -18,5 +18,5 @@ public class Car {
     private String gearbox;
     private String mileage;
     private PurchaseInfo purchaseInfo;
-    private List<CarEvent> carEvents;
+    private List<GarageEvent> carEvents;
 }
