@@ -1,0 +1,16 @@
+export enum PartsCategoryTypes {
+  CAR_MAINTENCE = 'Maintence',
+  BIKE_MAINTENCE = 'Maintence',
+  CAR_FLUIDS = 'Fluids',
+  BIKE_FLUIDS = 'Fluids',
+  CLEANING = 'Cleaning products',
+  ACCESORIES = 'Accessories',
+  CAR_SUSPENSIONS = 'Car suspension',
+  BIKE_SUSPENSIONS = 'Bike suspension',
+  CAR_ENGINE = 'Car engine',
+  BIKE_ENGINE = 'Bike engine',
+  CAR_BODY = 'Car body',
+  BIKE_FRAME = 'Bike frame',
+  CAR_BRAKES = 'Car brakes',
+  BIKE_BRAKES = 'Bike brakes',
+}
