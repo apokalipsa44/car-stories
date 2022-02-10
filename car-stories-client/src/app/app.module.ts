@@ -5,10 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BankAccountPipe } from './shared/pipes/bank-account.pipe';
 import { EnumPipe } from './shared/pipes/enum.pipe';
-import { UserOptionsViewModule } from './UI/user-options-view/user-options-view.module';
-import { StoryViewModule } from './UI/story-view/story-view.module';
-import { ShopViewModule } from './UI/shop-view/shop-view.module';
-
+    import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,9 +19,10 @@ import { ShopViewModule } from './UI/shop-view/shop-view.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserOptionsViewModule,
-    StoryViewModule,
-    ShopViewModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
