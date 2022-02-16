@@ -1,1 +1,13 @@
-<p>user-form works!</p>
+<div [formGroup]="userForm">
+  <input pInputText id="firstName" formControlName="firstName" />
+  <label for="firstName">FirstName</label>
+  <input formControlName="lastName" />
+  <input formControlName="login" />
+  <input formControlName="passowrd" />
+  <input formControlName="email" />
+  <input formControlName="phone" />
+  <input formControlName="accountNumber" />
+</div>
+<div>
+  <button pButtonł (click)="saveUser()"  class="p-button-raised">Save</button>
+</div>

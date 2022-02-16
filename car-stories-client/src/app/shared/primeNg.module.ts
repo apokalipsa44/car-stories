@@ -19,10 +19,11 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { TreeTableModule } from 'primeng/treetable';
 import { TreeModule } from 'primeng/tree';
 
+
 @NgModule({
   imports: [
-    Footer,
-    Header,
+    // Footer,
+    // Header,
     InputMaskModule,
     SharedModule,
     TableModule,
@@ -42,8 +43,34 @@ import { TreeModule } from 'primeng/tree';
     TreeTableModule,
     TreeModule,
     InputTextModule,
-    ConfirmDialog,
-    Dialog,
+    // ConfirmDialog,
+    // Dialog,
   ],
+  exports: [
+    // Footer,
+    // Header,
+    InputMaskModule,
+    SharedModule,
+    TableModule,
+    DialogModule,
+    ConfirmDialogModule,
+    DropdownModule,
+    MenubarModule,
+    ButtonModule,
+    ListboxModule,
+    RadioButtonModule,
+    PanelModule,
+    AccordionModule,
+    CalendarModule,
+    TabViewModule,
+    FocusTrapModule,
+    CheckboxModule,
+    TreeTableModule,
+    TreeModule,
+    InputTextModule,
+    // ConfirmDialog,
+    // Dialog,
+  ]
 })
-export class PrimeNgModule {}
+export class PrimeNgModule {
+}
