@@ -22,8 +22,6 @@ import { TreeModule } from 'primeng/tree';
 
 @NgModule({
   imports: [
-    // Footer,
-    // Header,
     InputMaskModule,
     SharedModule,
     TableModule,
@@ -43,12 +41,8 @@ import { TreeModule } from 'primeng/tree';
     TreeTableModule,
     TreeModule,
     InputTextModule,
-    // ConfirmDialog,
-    // Dialog,
   ],
   exports: [
-    // Footer,
-    // Header,
     InputMaskModule,
     SharedModule,
     TableModule,
@@ -68,8 +62,6 @@ import { TreeModule } from 'primeng/tree';
     TreeTableModule,
     TreeModule,
     InputTextModule,
-    // ConfirmDialog,
-    // Dialog,
   ]
 })
 export class PrimeNgModule {
