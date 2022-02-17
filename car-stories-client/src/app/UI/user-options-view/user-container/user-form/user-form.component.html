@@ -1,6 +1,8 @@
 <div [formGroup]="userForm">
-  <input pInputText id="firstName" formControlName="firstName" />
-  <label for="firstName">FirstName</label>
+  <span class="p-float-label">
+    <input pInputText id="firstName" type="text" formControlName="firstName" />
+    <label for="firstName">FirstName</label>
+  </span>
   <input formControlName="lastName" />
   <input formControlName="login" />
   <input formControlName="passowrd" />
@@ -9,5 +11,11 @@
   <input formControlName="accountNumber" />
 </div>
 <div>
-  <button pButtonł (click)="saveUser()"  class="p-button-raised">Save</button>
+  <button pButton (click)="saveUser()"  class="p-button-raised">Save</button>
 </div>
+<span class="p-float-label">
+  <input id="float-input" type="text" pInputText> 
+  <label for="float-input">Username</label>
+</span>
+
+
