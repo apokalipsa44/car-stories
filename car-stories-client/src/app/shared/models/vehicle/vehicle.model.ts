@@ -1,4 +1,4 @@
-import { BikeTags } from '../../enums/bikeTags.enum';
+import { BikeTags } from '../../enums/tags/bikeTags.enum';
 import { CarTags } from '../../enums/carTags.enum';
 import { VehicleTypes } from '../../enums/vehicleTypes.enum';
 import { EngineSpecks } from './engineSpecks.model';
