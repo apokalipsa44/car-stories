@@ -3,8 +3,8 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { SharedModule, Header, Footer } from 'primeng/api';
 import { TableModule } from 'primeng/table';
-import { Dialog, DialogModule } from 'primeng/dialog';
-import { ConfirmDialog, ConfirmDialogModule } from 'primeng/confirmdialog';
+import {  DialogModule } from 'primeng/dialog';
+import {  ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
@@ -18,11 +18,14 @@ import { FocusTrapModule } from 'primeng/focustrap';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TreeTableModule } from 'primeng/treetable';
 import { TreeModule } from 'primeng/tree';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { RatingModule } from 'primeng/rating';
+import { ToolbarModule } from 'primeng/toolbar';
+
 
 @NgModule({
   imports: [
-    Footer,
-    Header,
     InputMaskModule,
     SharedModule,
     TableModule,
@@ -42,8 +45,36 @@ import { TreeModule } from 'primeng/tree';
     TreeTableModule,
     TreeModule,
     InputTextModule,
-    ConfirmDialog,
-    Dialog,
+    ToolbarModule,
+    RatingModule,
+    InputNumberModule,
+    InputTextareaModule,
   ],
+  exports: [
+    InputMaskModule,
+    SharedModule,
+    TableModule,
+    DialogModule,
+    ConfirmDialogModule,
+    DropdownModule,
+    MenubarModule,
+    ButtonModule,
+    ListboxModule,
+    RadioButtonModule,
+    PanelModule,
+    AccordionModule,
+    CalendarModule,
+    TabViewModule,
+    FocusTrapModule,
+    CheckboxModule,
+    TreeTableModule,
+    TreeModule,
+    InputTextModule,
+    ToolbarModule,
+    RatingModule,
+    InputNumberModule,
+    InputTextareaModule,
+  ]
 })
-export class PrimeNgModule {}
+export class PrimeNgModule {
+}
